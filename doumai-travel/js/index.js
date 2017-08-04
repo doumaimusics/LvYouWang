@@ -1,0 +1,14 @@
+$(function(){
+	//页面底部导航
+    $('.g-footer-list').find('.u-nav-line').hide();
+    $('.g-footer-list').click(function(e){
+    	$(this).find('.u-nav-line').removeClass('active');
+    	$('.active').slideUp();
+    	$(this).find('.u-nav-line').stop().slideToggle();
+    	$(this).find('.u-nav-line').addClass('active');
+    	e.stopPropagation()
+    })
+    $(document).click(function(){
+    	$('.g-footer-list').find('.u-nav-line').hide();
+    })	
+})
